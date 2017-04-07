@@ -28,7 +28,11 @@ class LiftCell: UITableViewCell {
     override func setNeedsDisplay() {
         super.setNeedsDisplay()
     }
-    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+//        self.contentView.frame = UIEdgeInsetsInsetRect(contentView.frame, UIEdgeInsetsMake(10, 10, 10, 10))
+    }
+
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         

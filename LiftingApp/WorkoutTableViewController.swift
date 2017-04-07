@@ -71,28 +71,26 @@ class WorkoutTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+   
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return workout!.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return workout!.count
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "lift", for: indexPath)
         if let liftCell = cell as? LiftCell {
-            if let activity = workout?[indexPath.row] {
+            if let activity = workout?[indexPath.section] {
                 liftCell.nameLabel?.text = activity.lift.name
                 liftCell.weightLabel?.text = String(activity.lift.workingWeight) + " lbs"
                 addSetsToButtonStack(liftCell.buttonStack, sets: activity.sets)
-                
-                tableView.reloadRows(at: [indexPath], with: .fade)
             }
         }
         // Configure the cell...
@@ -122,7 +120,20 @@ class WorkoutTableViewController: UITableViewController {
             counter += 1
         }
     }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = UIColor.clear
+        headerView.heightAnchor.constraint(equalToConstant: 15).isActive = true
+        return headerView
+    }
 
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection: Int) -> CGFloat {
+        return CGFloat(15)
+    }
+    
+    
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

@@ -20,29 +20,29 @@
                         <color key="backgroundColor" red="0.82864371480065269" green="0.86929079540306042" blue="0.9253881573677063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="separatorColor" cocoaTouchSystemColor="lightTextColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="lift" rowHeight="115" id="8Tn-y0-8bG" customClass="LiftCell" customModule="LiftingApp" customModuleProvider="target">
+                            <tableViewCell opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="lift" rowHeight="115" id="8Tn-y0-8bG" customClass="LiftCell" customModule="LiftingApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="115"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8Tn-y0-8bG" id="WBh-YQ-siJ">
+                                <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8Tn-y0-8bG" id="WBh-YQ-siJ">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vhq-N1-Yhe" userLabel="Lift Stack">
-                                            <rect key="frame" x="8" y="8" width="359" height="98.5"/>
+                                        <stackView contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vhq-N1-Yhe" userLabel="Lift Stack">
+                                            <rect key="frame" x="8" y="11" width="359" height="95.5"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ma6-SV-lLg">
-                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="20.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="17.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lift" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6oW-Kc-9zU">
-                                                            <rect key="frame" x="0.0" y="0.0" width="179.5" height="20.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="179.5" height="17.5"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIb-WK-nhR">
-                                                            <rect key="frame" x="179.5" y="0.0" width="179.5" height="20.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                            <rect key="frame" x="179.5" y="0.0" width="179.5" height="17.5"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                            <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -51,17 +51,19 @@
                                                     </constraints>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3m6-Js-ip5" userLabel="Button Stack">
-                                                    <rect key="frame" x="0.0" y="20.5" width="359" height="78"/>
+                                                    <rect key="frame" x="0.0" y="17.5" width="359" height="78"/>
                                                 </stackView>
                                             </subviews>
+                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstItem="3m6-Js-ip5" firstAttribute="leading" secondItem="vhq-N1-Yhe" secondAttribute="leading" id="Ti9-DC-dph"/>
                                             </constraints>
                                         </stackView>
                                     </subviews>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstItem="vhq-N1-Yhe" firstAttribute="leading" secondItem="WBh-YQ-siJ" secondAttribute="leadingMargin" id="AnS-Wc-b9h"/>
-                                        <constraint firstItem="vhq-N1-Yhe" firstAttribute="top" secondItem="WBh-YQ-siJ" secondAttribute="topMargin" id="Kgi-Pl-jLX"/>
+                                        <constraint firstItem="vhq-N1-Yhe" firstAttribute="top" secondItem="WBh-YQ-siJ" secondAttribute="topMargin" constant="3" id="Kgi-Pl-jLX"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="vhq-N1-Yhe" secondAttribute="trailing" id="jzF-AA-5Dv"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="vhq-N1-Yhe" secondAttribute="bottom" id="leB-a8-OTW"/>
                                     </constraints>
