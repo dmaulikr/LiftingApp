@@ -16,14 +16,19 @@ class WorkoutTableViewController: UITableViewController {
     
     @IBAction func setComplete(_ sender: UIButton) {
         print("Ding")
+        let activity = workout?[sender.tag]
+        
         if sender.backgroundImage(for: .normal) == UIImage(named: "filledCircle")
         {
-            sender.setBackgroundImage(UIImage(named: "emptyCircle"), for: .normal)
+            sender.setBackgroundImage(UIImage(named: "emptyCircle"), for: .highlighted)
         } else {
             sender.setBackgroundImage(UIImage(named: "filledCircle"),
                                       for: .normal)
         }
 
+    }
+    @IBAction func nextWorkout(_ sender: UIBarButtonItem) {
+        
     }
     
 
@@ -75,7 +80,6 @@ class WorkoutTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     override func didReceiveMemoryWarning() {
@@ -115,10 +119,9 @@ class WorkoutTableViewController: UITableViewController {
     
     func addSetsToButtonStack(_ stackView: UIStackView, sets: Int) {
         var counter = 1
-        //            let margins = buttonStack.layoutMarginsGuide
-         //var existingButton = stackView.subviews[0] as! UIButton
+
         stackView.axis = .horizontal
-        for _ in 0 ..< sets {
+        for index in 0 ..< sets {
             let newButton = UIButton()
             newButton.translatesAutoresizingMaskIntoConstraints = false
             newButton.setBackgroundImage(UIImage(named: "emptyCircle"),
@@ -128,9 +131,9 @@ class WorkoutTableViewController: UITableViewController {
             newButton.addTarget(self, action: #selector(self.setComplete), for: .touchUpInside)
             newButton.layer.cornerRadius = 25
             newButton.clipsToBounds = true
+            newButton.tag = index
             
             stackView.addArrangedSubview(newButton)
-            print(stackView.subviews.count)
             
             counter += 1
         }

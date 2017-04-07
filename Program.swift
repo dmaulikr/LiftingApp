@@ -88,6 +88,5 @@ class Program {
 struct Activity {
     var lift: Lift
     var reps: Int
-    var sets: Int
-    
+    var sets: Int    
 }
