@@ -12,7 +12,7 @@ class WorkoutTableViewController: UITableViewController {
     
     var workout: Workout?
     var program: Program?
-    var numberOfWorkoutsCompleted = 0
+    var numberOfWorkoutsCompleted = 7
     
     @IBAction func setComplete(_ sender: UIButton) {
         print("Ding")
@@ -35,18 +35,29 @@ class WorkoutTableViewController: UITableViewController {
     
     func makeStronglifts() {
         
-//        let stronglifts = [[squat, bench, pendlayRow], [squat, overheadPress, deadlift]]
-        
         let strongliftsLift = [deadlift, squat, bench, overheadPress, pendlayRow]
         let strongLifts = Program(reps: 5, sets: 5, lifts: strongliftsLift, cycle: [[1, 2, 4], [1, 3, 0]])
-        
         program = strongLifts
         
-//        let strongliftsSchema = Workout(intensity: 1, sets: 5, reps: 5, liftSets: stronglifts)
     }
     
     func assignTodaysWorkout() {
-        workout = program?.getWorkoutForDay(numberOfWorkoutsCompleted)
+        
+//        for exercise in program!.exercises {
+//            for _ in 0 ..< 7 {
+//                program!.markSuccessForLift(exercise.lift)
+//                
+//            }
+//        }
+//        
+//        program!.markSuccessForLift(squat)
+//        program!.markSuccessForLift(squat)
+//        program!.markSuccessForLift(squat)
+//        program!.markSuccessForLift(squat)
+//        program!.markSuccessForLift(squat)
+
+        workout = program?.getWorkoutCycleForDay(numberOfWorkoutsCompleted)
+
     }
 
     
@@ -60,8 +71,7 @@ class WorkoutTableViewController: UITableViewController {
         makeStronglifts()
         assignTodaysWorkout()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
@@ -90,6 +100,10 @@ class WorkoutTableViewController: UITableViewController {
             if let activity = workout?[indexPath.section] {
                 liftCell.nameLabel?.text = activity.lift.name
                 liftCell.weightLabel?.text = String(activity.lift.workingWeight) + " lbs"
+                
+                liftCell.stackDrawingView.layer.cornerRadius = 10
+                liftCell.stackDrawingView.clipsToBounds = true
+                
                 addSetsToButtonStack(liftCell.buttonStack, sets: activity.sets)
             }
         }
@@ -108,10 +122,10 @@ class WorkoutTableViewController: UITableViewController {
             newButton.translatesAutoresizingMaskIntoConstraints = false
             newButton.setBackgroundImage(UIImage(named: "emptyCircle"),
                                          for: .normal)
-            newButton.widthAnchor.constraint(equalToConstant: CGFloat(40)).isActive = true
-            newButton.heightAnchor.constraint(equalToConstant: CGFloat(40)).isActive = true
+            newButton.widthAnchor.constraint(equalToConstant: CGFloat(50)).isActive = true
+            newButton.heightAnchor.constraint(equalToConstant: CGFloat(50)).isActive = true
             newButton.addTarget(self, action: #selector(self.setComplete), for: .touchUpInside)
-            newButton.layer.cornerRadius = 20
+            newButton.layer.cornerRadius = 25
             newButton.clipsToBounds = true
             
             stackView.addArrangedSubview(newButton)

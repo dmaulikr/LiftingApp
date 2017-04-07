@@ -11,14 +11,17 @@ import UIKit
 typealias Workout = [Activity]
 
 class Program {
-//    var lifts: Set<Lift>
     
-
+    
+    // Major mode
+    var exercises = [Activity]()
     
     var workoutCycle = [Workout]()
+    
     var dayOfProgram: Int = 0
+    
     var hasRepVariation = false
-    var exercises = [Activity]()
+    
     
     var todaysWorkout: Workout {
         get {
@@ -27,9 +30,38 @@ class Program {
         }
     }
     
-    func getWorkoutForDay(_ day: Int) -> Workout {
+    func getWorkingWeightOf(_ lift: Lift) -> Int {
+        for exercise in exercises {
+            if exercise.lift == lift {
+                return exercise.lift.workingWeight
+            }
+        }
+        return lift.startingWeight
+    }
+    
+    func markSuccessForLift(_ lift: Lift) {
+        for exercise in exercises {
+            if exercise.lift == lift {
+                let previousWorkingWeight = exercise.lift.workingWeight
+                exercise.lift.workingWeight = previousWorkingWeight + exercise.lift.progressionPace
+            }
+        }
+    }
+    
+    func getWorkoutCycleForDay(_ day: Int) -> Workout {
         let dayInCycle = day % workoutCycle.count
-        return workoutCycle[dayInCycle]
+        let workout = workoutCycle[dayInCycle]
+        var outgoingWorkout: Workout = [Activity]()
+        
+        for activity in workout {
+            for exercise in exercises {
+                if activity.lift.name == exercise.lift.name {
+                    outgoingWorkout.append(exercise)
+                }
+            }
+        }
+        
+        return outgoingWorkout
     }
     
     

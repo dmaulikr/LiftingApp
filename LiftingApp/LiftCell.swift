@@ -12,6 +12,8 @@ class LiftCell: UITableViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
+
+    @IBOutlet weak var stackDrawingView: UIView!
     
     @IBOutlet weak var buttonStack: UIStackView!
     

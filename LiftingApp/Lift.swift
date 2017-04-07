@@ -13,6 +13,11 @@ class Lift: Any, Hashable, Equatable{
     let startingWeight: Int
     
     let progressionPace: Int
+    var numSuccessfulWorkouts = 0 {
+        didSet {
+            workingWeight = startingWeight + (progressionPace * numSuccessfulWorkouts)
+        }
+    }
     var workingWeight: Int = 0
     
     
