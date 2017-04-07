@@ -7,13 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A0CE9E71E959F5D00F9F29D /* WorkoutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0CE9E61E959F5D00F9F29D /* WorkoutTableViewController.swift */; };
 		4A2FC5C11E946BAC004D3B7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2FC5C01E946BAC004D3B7C /* AppDelegate.swift */; };
-		4A2FC5C31E946BAC004D3B7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2FC5C21E946BAC004D3B7C /* ViewController.swift */; };
 		4A2FC5C61E946BAC004D3B7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A2FC5C41E946BAC004D3B7C /* Main.storyboard */; };
 		4A2FC5C81E946BAC004D3B7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A2FC5C71E946BAC004D3B7C /* Assets.xcassets */; };
 		4A2FC5CB1E946BAC004D3B7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A2FC5C91E946BAC004D3B7C /* LaunchScreen.storyboard */; };
 		4A2FC5D61E946BAC004D3B7C /* LiftingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2FC5D51E946BAC004D3B7C /* LiftingAppTests.swift */; };
 		4A2FC5E11E946BAC004D3B7C /* LiftingAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2FC5E01E946BAC004D3B7C /* LiftingAppUITests.swift */; };
+		4A2FC5F11E947462004D3B7C /* Lift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2FC5F01E947462004D3B7C /* Lift.swift */; };
+		4A2FC5F31E947B46004D3B7C /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2FC5F21E947B46004D3B7C /* Program.swift */; };
+		4A2FC5F61E948133004D3B7C /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4A2FC5F41E948133004D3B7C /* Model.xcdatamodeld */; };
+		4ACC59151E97B2F4003FC5D3 /* LiftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACC59141E97B2F4003FC5D3 /* LiftCell.swift */; };
+		4ACC591C1E97ED79003FC5D3 /* emptyCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = 4ACC591A1E97ED79003FC5D3 /* emptyCircle.png */; };
+		4ACC591D1E97ED79003FC5D3 /* filledCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = 4ACC591B1E97ED79003FC5D3 /* filledCircle.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A0CE9E61E959F5D00F9F29D /* WorkoutTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewController.swift; sourceTree = "<group>"; };
 		4A2FC5BD1E946BAC004D3B7C /* LiftingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiftingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A2FC5C01E946BAC004D3B7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4A2FC5C21E946BAC004D3B7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4A2FC5C51E946BAC004D3B7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4A2FC5C71E946BAC004D3B7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A2FC5CA1E946BAC004D3B7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +53,12 @@
 		4A2FC5DC1E946BAC004D3B7C /* LiftingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiftingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A2FC5E01E946BAC004D3B7C /* LiftingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftingAppUITests.swift; sourceTree = "<group>"; };
 		4A2FC5E21E946BAC004D3B7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A2FC5F01E947462004D3B7C /* Lift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lift.swift; sourceTree = "<group>"; };
+		4A2FC5F21E947B46004D3B7C /* Program.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Program.swift; path = ../Program.swift; sourceTree = "<group>"; };
+		4A2FC5F51E948133004D3B7C /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		4ACC59141E97B2F4003FC5D3 /* LiftCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiftCell.swift; sourceTree = "<group>"; };
+		4ACC591A1E97ED79003FC5D3 /* emptyCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emptyCircle.png; sourceTree = "<group>"; };
+		4ACC591B1E97ED79003FC5D3 /* filledCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = filledCircle.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +109,15 @@
 		4A2FC5BF1E946BAC004D3B7C /* LiftingApp */ = {
 			isa = PBXGroup;
 			children = (
+				4A2FC5F21E947B46004D3B7C /* Program.swift */,
 				4A2FC5C01E946BAC004D3B7C /* AppDelegate.swift */,
-				4A2FC5C21E946BAC004D3B7C /* ViewController.swift */,
+				4A2FC5F41E948133004D3B7C /* Model.xcdatamodeld */,
+				4A2FC5F01E947462004D3B7C /* Lift.swift */,
 				4A2FC5C41E946BAC004D3B7C /* Main.storyboard */,
+				4ACC59141E97B2F4003FC5D3 /* LiftCell.swift */,
+				4A0CE9E61E959F5D00F9F29D /* WorkoutTableViewController.swift */,
+				4ACC591A1E97ED79003FC5D3 /* emptyCircle.png */,
+				4ACC591B1E97ED79003FC5D3 /* filledCircle.png */,
 				4A2FC5C71E946BAC004D3B7C /* Assets.xcassets */,
 				4A2FC5C91E946BAC004D3B7C /* LaunchScreen.storyboard */,
 				4A2FC5CC1E946BAC004D3B7C /* Info.plist */,
@@ -235,6 +253,8 @@
 				4A2FC5CB1E946BAC004D3B7C /* LaunchScreen.storyboard in Resources */,
 				4A2FC5C81E946BAC004D3B7C /* Assets.xcassets in Resources */,
 				4A2FC5C61E946BAC004D3B7C /* Main.storyboard in Resources */,
+				4ACC591D1E97ED79003FC5D3 /* filledCircle.png in Resources */,
+				4ACC591C1E97ED79003FC5D3 /* emptyCircle.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +279,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A2FC5C31E946BAC004D3B7C /* ViewController.swift in Sources */,
+				4A2FC5F31E947B46004D3B7C /* Program.swift in Sources */,
+				4A2FC5F11E947462004D3B7C /* Lift.swift in Sources */,
+				4ACC59151E97B2F4003FC5D3 /* LiftCell.swift in Sources */,
 				4A2FC5C11E946BAC004D3B7C /* AppDelegate.swift in Sources */,
+				4A2FC5F61E948133004D3B7C /* Model.xcdatamodeld in Sources */,
+				4A0CE9E71E959F5D00F9F29D /* WorkoutTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +531,7 @@
 				4A2FC5E71E946BAC004D3B7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4A2FC5E81E946BAC004D3B7C /* Build configuration list for PBXNativeTarget "LiftingAppTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +540,7 @@
 				4A2FC5EA1E946BAC004D3B7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4A2FC5EB1E946BAC004D3B7C /* Build configuration list for PBXNativeTarget "LiftingAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,8 +549,22 @@
 				4A2FC5ED1E946BAC004D3B7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4A2FC5F41E948133004D3B7C /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4A2FC5F51E948133004D3B7C /* Model.xcdatamodel */,
+			);
+			currentVersion = 4A2FC5F51E948133004D3B7C /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4A2FC5B51E946BAC004D3B7C /* Project object */;
 }
