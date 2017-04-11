@@ -16,7 +16,6 @@ class WorkoutTableViewController: UITableViewController {
     
     @IBAction func setComplete(_ sender: UIButton) {
         print("Ding")
-        let activity = workout?[sender.tag]
         
         if sender.backgroundImage(for: .normal) == UIImage(named: "filledCircle")
         {
